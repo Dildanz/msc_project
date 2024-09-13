@@ -1,0 +1,63 @@
+# Data sources configuration
+# This YAML file defines the configuration for retrieving data from various sources
+# Each source specifies the data retrieval method, URL, and output location
+# The configuration is used by extract.py to fetch and store raw data
+
+sources:
+  # Bank of England base rate data
+  - name: boe_rate
+    type: web_scrape  # Data is scraped from a web page
+    url: "https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp"
+    method: GET
+    parser: html.parser  # Specifies the HTML parser to use
+    file_type: csv
+    output_file: "data/raw/boe_rates.csv"
+
+  # Mortgage rate data
+  - name: mortgage_rate
+    type: direct_download  # Data is downloaded directly from the URL
+    url: "https://www.fca.org.uk/publication/data/mlar-statistics-summary-long-run.xlsx"
+    method: GET
+    file_type: xlsx  # Excel file format
+    sheet_name: "Summary 1"  # Specifies which sheet to extract from the Excel file
+    output_file: "data/raw/mortgage_rates.csv"
+
+  # Additional dwellings data
+  - name: additional_dwellings
+    type: web_scrape
+    url: "https://www.gov.uk/government/statistical-data-sets/live-tables-on-net-supply-of-housing"
+    method: GET
+    parser: html.parser
+    file_type: ods  # OpenDocument Spreadsheet format
+    output_file: "data/raw/additional_dwellings.csv"
+    link_text: "Table 122: housing supply; net additional dwellings, by local authority district, England"
+    sheet_name: "LT122"
+    base_url: "https://www.gov.uk"  # Base URL for resolving relative links
+
+  # Price paid data for property transactions
+  - name: price_paid
+    type: direct_download
+    url: "http://prod1.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-complete.csv"
+    method: GET
+    file_type: csv
+    output_file: "data/raw/price_paid.csv"
+
+  # School count data
+  - name: school_count
+    type: web_scrape
+    url: "https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics"
+    method: GET
+    parser: html.parser
+    file_type: zip  # Data is in a ZIP archive
+    output_file: "data/raw/school_count.csv"
+    link_text: "Download all data (zip)"
+    zip_target_file: "spc_school_characteristics_*.csv"  # Specifies which file to extract from the ZIP
+    base_url: "https://explore-education-statistics.service.gov.uk"
+
+  # Unemployment rate data
+  - name: unemployment
+    type: direct_download
+    url: "https://www.ons.gov.uk/generator?format=csv&uri=/employmentandlabourmarket/peoplenotinwork/unemployment/timeseries/mgsx/lms"
+    method: GET
+    file_type: csv
+    output_file: "data/raw/unemployment.csv"

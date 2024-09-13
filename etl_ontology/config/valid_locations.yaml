@@ -1,0 +1,164 @@
+# valid_locations.yaml
+#
+# This file contains a list of valid location names for use in the real estate and economic data ontology.
+# These locations represent various cities and towns in England and Wales.
+#
+# NOTE: The current list is limited to England and Wales locations due to the data scope of some of the source files.
+# Adding locations from other regions (e.g., Scotland, Northern Ireland) is possible, but we would be populating
+# these locations with data outside of it's geographical scope.
+#
+# The list is used for data validation and standardisation in the RDF transformation process.
+
+locations:
+  - abingdon
+  - accrington
+  - aldershot
+  - alfreton
+  - alnwick
+  - andover
+  - arundel
+  - ashington
+  - ashford
+  - aylesbury
+  - banbury
+  - barnsley
+  - barrow-in-furness
+  - basingstoke
+  - bath
+  - bedford
+  - berwick-upon-tweed
+  - beverley
+  - bicester
+  - bideford
+  - birmingham
+  - blackburn
+  - blackpool
+  - bolton
+  - boston
+  - bournemouth
+  - bradford
+  - bridlington
+  - brighton
+  - bristol
+  - burnley
+  - bury
+  - cambridge
+  - canterbury
+  - cardiff
+  - carlisle
+  - carmarthen
+  - chatham
+  - chelmsford
+  - cheltenham
+  - chester
+  - chesterfield
+  - chichester
+  - cleethorpes
+  - colchester
+  - coventry
+  - crawley
+  - crewe
+  - darlington
+  - dartford
+  - derby
+  - doncaster
+  - dorchester
+  - dover
+  - durham
+  - eastbourne
+  - eastleigh
+  - exeter
+  - fareham
+  - felixstowe
+  - folkestone
+  - gloucester
+  - grantham
+  - gravesend
+  - grimsby
+  - guildford
+  - halifax
+  - harrogate
+  - hartlepool
+  - hastings
+  - hemel hempstead
+  - hereford
+  - high wycombe
+  - hitchin
+  - huddersfield
+  - ipswich
+  - keighley
+  - kendal
+  - kettering
+  - kidderminster
+  - king's lynn
+  - kingston upon hull
+  - lancaster
+  - leamington spa
+  - leeds
+  - leicester
+  - lincoln
+  - liverpool
+  - london
+  - loughborough
+  - lowestoft
+  - luton
+  - macclesfield
+  - maidstone
+  - manchester
+  - mansfield
+  - medway
+  - middlesbrough
+  - milton keynes
+  - newcastle upon tyne
+  - newport
+  - newquay
+  - northampton
+  - norwich
+  - nottingham
+  - oldham
+  - oxford
+  - peterborough
+  - plymouth
+  - poole
+  - portsmouth
+  - preston
+  - reading
+  - redcar
+  - rochdale
+  - rotherham
+  - royal tunbridge wells
+  - rugby
+  - salisbury
+  - scarborough
+  - scunthorpe
+  - sheffield
+  - shrewsbury
+  - slough
+  - southampton
+  - southend-on-sea
+  - southport
+  - st albans
+  - st helens
+  - stafford
+  - stockport
+  - stoke-on-trent
+  - sunderland
+  - swansea
+  - swindon
+  - telford
+  - tonbridge
+  - torquay
+  - wakefield
+  - walsall
+  - warrington
+  - warwick
+  - watford
+  - weston-super-mare
+  - wigan
+  - winchester
+  - woking
+  - wolverhampton
+  - worcester
+  - worthing
+  - wrexham
+  - york

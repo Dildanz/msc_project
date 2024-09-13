@@ -1,0 +1,12 @@
+beautifulsoup4
+dateparser
+numpy
+odfpy
+openpyxl
+pandas
+PyYAML
+python-dateutil
+rdflib
+requests
+tqdm
+datetime
